@@ -16,7 +16,7 @@ Pour installer le projet via Docker, suivez ces étapes :
 1. Clonez ou téléchargez le dépôt GitHub avec la commande suivante :
 
     ```bash
-    git clone https://github.com/dani03/api_orange_restricted.git
+    git clone https://github.com/dani03/api_iris.git
     ```
 
 2. Accédez au répertoire du projet, puis exécutez la commande suivante pour construire et démarrer les services :
