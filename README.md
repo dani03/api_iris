@@ -95,7 +95,7 @@ Pour une installation sans Docker, suivez ces étapes :
 1.  Clonez ou téléchargez le dépôt GitHub avec la commande suivante :
 
     ```bash
-    git clone https://github.com/dani03/api_orange_restricted.git
+    git clone https://github.com/dani03/api_iris.git
     ```
 
 2.  Accédez au répertoire du projet et créez un fichier `.env` à la racine. Copiez-collez le contenu du fichier `.env.exemple` dans le nouveau fichier `.env`. Remplacez ensuite les informations de connexion à la base de données avec vos propres identifiants :
