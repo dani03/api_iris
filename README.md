@@ -65,8 +65,17 @@ docker compose up --build -d nginx
 touch ./database/database.sqlite
 docker compose run --rm composer install
 
-créer un fichier .env file à la racine du projet comme indiqué dans la partie de l\'installation classique
-et ajouter y le les variable correspondantes et leurs valeurs
+créer un fichier .env file à la racine du projet en copiant et en collant .env.example comme indiqué dans la partie de l\'installation classique
+et ajouter y le les variable correspondantes et leurs valeurs comme suivant:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel_11_api
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+```
 
 docker compose run --rm artisan key:generate
 docker compose run --rm artisan migrate
@@ -87,6 +96,9 @@ pour nettoyer le cache et les configurations supprimées
 
 
 8. Pour stopper les containers taper la commande `docker compose down` vos données ne seront pas perdues. 
+
+vous pouvez effectuer l'étape 3 ou l'étape 4 de cette documentation pour tester si vous êtes bien connecté à l'api et 
+voir la documentation pour tester les endpoints
 
 ### 2. Installation classique
 
