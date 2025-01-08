@@ -58,7 +58,7 @@ services:
             - laravel_network
 
     composer:
-        image: composer:latest
+        image: composer:2.8
         container_name: composer
         volumes:
             - .:/var/www/html
