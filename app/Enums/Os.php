@@ -8,7 +8,6 @@ enum Os: int
     case LINUX = 1;
     case WINDOWS = 2;
 
-
     public function label(): string
     {
         return match ($this) {

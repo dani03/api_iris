@@ -8,43 +8,34 @@ use App\Models\Article;
 
 class ArticleService
 {
-
-    public function __construct(private readonly ArticleRepository $articleRepository)
-    {
-    }
+    public function __construct(private readonly ArticleRepository $articleRepository) {}
 
     public function getArticles()
     {
-       return $this->articleRepository->allArticles();
+        return $this->articleRepository->allArticles();
 
     }
 
     public function saveArticle(ArticleRequest $request): bool
     {
         $datas = $request->all();
-       return  $this->articleRepository->addArticle($datas);
+
+        return $this->articleRepository->addArticle($datas);
     }
 
-    /**
-     * @param int $articleId
-     * @return Article|null
-     */
-    public function getOneArticle(int $articleId): Article|null
+    public function getOneArticle(int $articleId): ?Article
     {
         return $this->articleRepository->getArticle($articleId);
     }
 
     /**
-     * @param Article $article
-     * @param $newDatas
      * @return bool
      */
     public function updateArticle(Article $article, $newDatas)
     {
-        $datas = ['title' => $newDatas['title'], 'text' => $newDatas['text'] ];
+        $datas = ['title' => $newDatas['title'], 'text' => $newDatas['text']];
 
         return $this->articleRepository->update($article, $datas);
 
     }
-
 }

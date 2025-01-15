@@ -2,14 +2,9 @@
 
 namespace App\Providers;
 
-use App\Models\User;
 use App\Policies\CommandePolicy;
-
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Sanctum\Sanctum;
-
-
 
 class AppServiceProvider extends ServiceProvider
 {

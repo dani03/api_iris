@@ -53,11 +53,13 @@ enum Technology: int
         ];
     }
 
-    public static function serverStrikeLabel() : string {
+    public static function serverStrikeLabel(): string
+    {
         return self::SERVER_STRIKE->label();
     }
 
-    public static function secureServerLabel() : string {
+    public static function secureServerLabel(): string
+    {
         return self::SECURE_SERVER->label();
     }
 }

@@ -5,7 +5,6 @@ namespace App\Policies;
 use App\Enums\Status;
 use App\Models\Commande;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
 
 class CommandePolicy
 {

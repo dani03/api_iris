@@ -15,13 +15,13 @@ class ArticleResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-         return [
-        'id' => $this->id,
-        'text' => $this->text,
-        'title' => $this->title,
-        'created_at' =>  Carbon::make($this->created_at)->diffForHumans(),
-        'updated_at' => Carbon::make($this->updated_at)->diffForHumans(),
+        return [
+            'id' => $this->id,
+            'text' => $this->text,
+            'title' => $this->title,
+            'created_at' => Carbon::make($this->created_at)->diffForHumans(),
+            'updated_at' => Carbon::make($this->updated_at)->diffForHumans(),
 
-    ];
+        ];
     }
 }

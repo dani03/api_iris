@@ -22,12 +22,12 @@ class RegisterRequest extends FormRequest
      */
     public function rules(): array
     {
-             return [
-                 'name' => ['required', 'string', 'max:255'],
-                 'password' => ['required', 'confirmed', Password::defaults()],
-                 'password_confirmation' => ['required', 'string', 'max:255'],
-                 'email' => ['required', 'email', 'unique:users'],
+        return [
+            'name' => ['required', 'string', 'max:255'],
+            'password' => ['required', 'confirmed', Password::defaults()],
+            'password_confirmation' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'unique:users'],
 
-             ];
+        ];
     }
 }

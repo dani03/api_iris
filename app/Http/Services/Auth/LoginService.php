@@ -7,13 +7,12 @@ use App\Http\Requests\Auth\LoginRequest;
 
 class LoginService
 {
+    public function __construct(private UserRepository $userRepository) {}
 
-    public function __construct(private UserRepository $userRepository)
+    public function getUser(LoginRequest $request)
     {
-    }
-
-    public function getUser(LoginRequest $request) {
         $userEmail = $request->email;
+
         return $this->userRepository->findUserByEmail($userEmail);
     }
 }

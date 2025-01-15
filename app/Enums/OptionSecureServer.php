@@ -4,11 +4,9 @@ namespace App\Enums;
 
 enum OptionSecureServer: int
 {
-
-    case PROTECTION_EXTENDED =  0 ;
+    case PROTECTION_EXTENDED = 0;
     case PROTECTION_CHIFFREMENT = 1;
-    case PARE_FEU =  2;
-
+    case PARE_FEU = 2;
 
     public function label(): string
     {
@@ -30,13 +28,12 @@ enum OptionSecureServer: int
         };
     }
 
-
     public static function fromLabel(string $label): ?OptionSecureServer
     {
         return match ($label) {
-            "protection étendue" => self::PROTECTION_EXTENDED,
-            "protection contre le chiffrement" => self::PROTECTION_CHIFFREMENT,
-            "pare-feu" => self::PARE_FEU,
+            'protection étendue' => self::PROTECTION_EXTENDED,
+            'protection contre le chiffrement' => self::PROTECTION_CHIFFREMENT,
+            'pare-feu' => self::PARE_FEU,
         };
     }
 
@@ -58,5 +55,4 @@ enum OptionSecureServer: int
 
         ];
     }
-
 }

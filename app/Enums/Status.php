@@ -61,7 +61,8 @@ enum Status: int
         ];
     }
 
-    public function completedValue() {
+    public function completedValue()
+    {
         return self::COMPLETED->value;
     }
 }

@@ -19,12 +19,13 @@ class UserRepository
         );
     }
 
-    public function findUserByEmail(String $email): User | null
+    public function findUserByEmail(string $email): ?User
     {
         return User::where('email', $email)->first();
     }
 
-    public function find(int $id): User|null {
+    public function find(int $id): ?User
+    {
         return User::find($id);
     }
 
@@ -37,5 +38,4 @@ class UserRepository
     {
         return $user->update($data);
     }
-
 }

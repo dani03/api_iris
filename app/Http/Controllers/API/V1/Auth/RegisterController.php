@@ -5,29 +5,22 @@ namespace App\Http\Controllers\API\V1\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Http\Services\Auth\RegisterService;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class RegisterController extends Controller
 {
-
-    public function __construct(private RegisterService $registerService)
-    {
-
-    }
+    public function __construct(private RegisterService $registerService) {}
 
     /**
-     *
-     *
      *  permet de s'enregistrer
-     * @param RegisterRequest $request
+     *
      * @return \Illuminate\Http\JsonResponse
      */
     public function __invoke(RegisterRequest $request)
     {
         $userCreate = $this->registerService->addUser($request);
-        if (!$userCreate) {
-            return Response()->json([ 'message' => 'impossible de créer l\'utilisateur un problème....'
+        if (! $userCreate) {
+            return Response()->json(['message' => 'impossible de créer l\'utilisateur un problème....',
 
             ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }

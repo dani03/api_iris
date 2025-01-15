@@ -14,7 +14,4 @@ class Article extends Model
         'text',
         'title',
     ];
-
-
-
 }
